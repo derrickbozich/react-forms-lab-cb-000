@@ -6,7 +6,7 @@ class LoginForm extends React.Component {
 
     this.state = {
       firstName: '',
-      lastName: '',
+      password: ''
     };
   }
 
@@ -44,7 +44,8 @@ class LoginForm extends React.Component {
           </label>
         </div>
         <div>
-          <button type="submit">Log in</button>
+          let loginInfo = (this.props.username != '' && this.props.password != '' ) ?
+          <button type="submit" onSubmit={this.props.onSubmit({this.state.username, this.state.password})}>Log in</button>
         </div>
       </form>
     );

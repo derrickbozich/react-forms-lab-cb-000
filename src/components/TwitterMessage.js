@@ -11,7 +11,7 @@ class TwitterMessage extends React.Component {
 
   handleInputChange = event =>{
     this.setState({
-      
+      [event.target.name]: event.target.value
     })
   }
 
